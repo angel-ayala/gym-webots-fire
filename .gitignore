@@ -1,0 +1,4 @@
+# blacklist IDE files
+*.spyproject
+
+**/__pycache__/*
