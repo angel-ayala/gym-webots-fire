@@ -65,10 +65,31 @@ class ContinuousUavEnv(gym.Env):
         return obs, reward, self.sim._end, {}  
     [...]
 ```
+## Installation and use
+In order to use this environment do as follows:
+```
+pip install git+https://github.com/angel-ayala/gym-webots-fire.git
+```
+A random agent example of use in python can be 
+```python
+import gym
+import time
 
-## Considerations of the environment
-This environment is an interface for the [Fire Scene](https://github.com/angel-ayala/webots-fire-scene) and take into consideration the [steps to run the Webots scene](https://github.com/angel-ayala/webots-fire-scene#running-the-scene).
-The interface use the SimController class to communicate with Webots through its Python API as a [Supervisor Controller](https://www.cyberbotics.com/doc/guide/supervisor-programming).
+env = gym.make('gym_webots_fire:WebotsFire-v0')
+print('reset')
+env.reset()
+
+for _ in range(1250):
+    env.render()
+    action = env.action_space.sample()
+    print('action', action)
+    env.step(action) # take a random action
+env.close()
+```
+
+### Considerations of the environment
+This environment is an interface for the [Webots Fire Scene](https://github.com/angel-ayala/webots-fire-scene) and take into consideration the [requirements to run the Webots scene](https://github.com/angel-ayala/webots-fire-scene#running-the-scene).
+The interface use the SimController class to communicate with Webots through it Python API as a [Supervisor Controller](https://www.cyberbotics.com/doc/guide/supervisor-programming).
 
 As mentioned before [here](https://github.com/angel-ayala/webots-fire-scene#running-the-scene), ensure that the WEBOTS_HOME and LD_LIBRARY_PATH OS environment variables are set, and in the PYTHONPATH the Webots lib controller is present.
 ```

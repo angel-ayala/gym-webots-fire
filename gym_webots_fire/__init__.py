@@ -9,6 +9,11 @@ Created on Fri May 29 19:06:18 2020
 from gym.envs.registration import register
 
 register(
-    id='WebotsFire-v0',
-    entry_point='gym_webots_fire.envs:ContinuousUavEnv',
+    id='WebotsFireContinuous-v0',
+    entry_point='gym_webots_fire.envs:ContinuousUAVEnv',
+)
+
+register(
+    id='WebotsFireDiscrete-v0',
+    entry_point='gym_webots_fire.envs:DiscreteUAVEnv',
 )

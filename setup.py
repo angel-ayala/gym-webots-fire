@@ -9,6 +9,6 @@ Created on Fri May 29 19:05:28 2020
 from setuptools import setup
 
 setup(name='gym_webots_fire',
-      version='0.1',
+      version='0.4',
       install_requires=['gym']  
 )
