@@ -1,3 +1,6 @@
+# Updated
+This repository is now maintaned under https://github.com/angel-ayala/gym-webots-drone
+
 # Gym Webots Fire Scene
 This repository contains the file to use the [OpenAI Gym toolkit](https://github.com/openai/gym) with the [Fire Scene](https://github.com/angel-ayala/webots-fire-scene) simulated in [Webots](https://github.com/cyberbotics/webots).
 The environment is intended to train a Reinforcement Learning agent to control a drone for a fire emergency response.
